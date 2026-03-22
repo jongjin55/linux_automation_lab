@@ -1,7 +1,9 @@
 #!/bin/bash
 
-TARGET_FILES=$(find logs -type f -name "*.log" -mtime +7)
+TARGET_FILES=$(find /home/moon/문서/study/linux_study/linux_automation_lab/logs -type f -name "*.log" -mtime +7)
 COUNT$(echo "$TARGET_FILES" | wc -l)
+
+LOG_FILE="cleanup_$(date +%Y%m%d).log"
 
 echo "삭제 대상 파일 수: $COUNT"
 
